@@ -1,0 +1,23 @@
+{
+  "name": "mind-ar-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/dom-webcodecs": "^0.1.7",
+    "@types/three": "^0.150.2",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.2"
+  },
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.11.6",
+    "hls.js": "^1.4.0",
+    "mind-ar": "^1.2.1",
+    "three": "^0.151.3"
+  }
+}
