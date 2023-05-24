@@ -12,10 +12,12 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             .wrap(Logger::default())
+            // NOTE: Broadcasterはworkerごとに異なる実体を持つ
             .app_data(web::Data::from(Broadcaster::new()))
             .configure(route::init)
     })
     .bind(("0.0.0.0", 8080))?
+    .workers(1)
     .run()
     .await
 }
